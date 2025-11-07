@@ -15,9 +15,9 @@ def kelvin_fahrenheit(t):
 st.sidebar.title("Conversor de temperatura")
 st.title("Conversos de temperatura")
 st.sidebar.markdown("Converte a temperatura em Celsius, fahrenheit e Kelvin")
-#celsius_selecionado=st.sidebar.checkbox("Celsius",key="temp_celsius")
-#fahrenheit_selecionado=st.sidebar.checkbox("Fahrenheit",key="temp_fahrenheit")
-#kelvin_selecionado=st.sidebar.checkbox("Kelvin",key="temp_kelvin")
+celsius_selecionado=st.sidebar.checkbox("Celsius",key="temp_celsius")
+fahrenheit_selecionado=st.sidebar.checkbox("Fahrenheit",key="temp_fahrenheit")
+kelvin_selecionado=st.sidebar.checkbox("Kelvin",key="temp_kelvin")
 #Entrada de dados
 temp=st.number_input("Valor da temperatura",format="%.2f",step=1.0)
 
