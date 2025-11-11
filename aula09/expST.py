@@ -1,4 +1,11 @@
 import streamlit as st
+#Função Porcentagem
+def porcentagem(cobaia):
+    return(cobaia/total_cobaias)*100
+def qtd(total):
+    total += quantidade 
+    return total
+
 #Problema experiências com cobaias
 st.title("Laboratório de cobaias")
 #Declaração de variáveis de controle
@@ -13,7 +20,7 @@ for i in range(n):
     quantidade=st.number_input(f"Experimento {i+1} - Quantidade de cobaias utilizadas: ",min_value=1,step=1)
     tipo=st.selectbox(f"Experimento {i+1} - Tipo de cobaia (C:Coelho,R:Rato, S:Sapo):", options=[ 'C','R','S'])
     #Processamento de dados
-    total_cobaias += quantidade
+    #total_cobaias += quantidade
     if tipo =='C':
         total_coelhos += quantidade
     elif tipo == 'R':
@@ -21,9 +28,9 @@ for i in range(n):
     elif tipo == 'S':
         total_sapos += quantidade
 if total_cobaias>0:
-    percentual_coelhos=(total_coelhos/total_cobaias)*100
-    percentual_ratos=(total_ratos/total_cobaias)*100
-    percentual_sapos=(total_sapos/total_cobaias)*100
+    percentual_coelhos=porcentagem(total_coelhos)
+    percentual_ratos=porcentagem(total_ratos)
+    percentual_sapos=porcentagem(total_sapos)
 else:
     percentual_coelhos=percentual_ratos=percentual_sapos=0
 #Saída de dados
