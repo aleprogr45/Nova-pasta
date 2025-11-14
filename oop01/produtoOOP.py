@@ -12,3 +12,12 @@ class Produto:
         return self.saldo
     def removerProdutos(self, quantidade) -> int:
         self.saldo = self.saldo - quantidade
+    def dadosDoProduto(self) -> str:
+        self.saida = f'''
+                Dados do produto:
+                \tNome do Produto: {self.nome}
+                \tValor de compra do produto: R$ {self.preco}
+                \tQuantidade em estoque: {self.saldo}
+                \tValor total em estoque: R$ {self.valorTotalEmEstoque():.2f}
+                '''
+        return self.saida
