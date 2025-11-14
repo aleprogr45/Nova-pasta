@@ -15,10 +15,19 @@ trianguloY.b = int(input("Digite a medida b:"))
 trianguloY.c = int(input("Digite a medida b:"))
 
 #Processamento de dados
-p = (trianguloX.a + trianguloX.b + trianguloX.c)/2
-areax = (p*(p-trianguloX.a)*(p-trianguloX.b)*(p-trianguloX.c))**0.5
-p = (trianguloY.a + trianguloY.b + trianguloY.c)/2
-areay = (p*(p-trianguloY.a)*(p-trianguloY.b)*(p-trianguloY.c))**0.5
+areax = trianguloX.area()
+areay = trianguloY.area()
+
+#trianguloX.area(trianguloX.a, trianguloX.b, trianguloX.c)
+#trianguloY.area(trianguloY.a, trianguloY.b, trianguloY.c)
+
+
+#p = (trianguloX.a + trianguloX.b + trianguloX.c)/2
+#areax = (p*(p-trianguloX.a)*(p-trianguloX.b)*(p-trianguloX.c))**0.5
+#p = (trianguloY.a + trianguloY.b + trianguloY.c)/2
+#areay = (p*(p-trianguloY.a)*(p-trianguloY.b)*(p-trianguloY.c))**0.5
+
+
 
 #Condicional para verificar qual triângulo é maior
 if areax > areay:
